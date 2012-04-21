@@ -20,8 +20,11 @@
         <%= origin_fields.input :zip, input_html: {class: "zip-field", maxlength: "10" } %>
       <%- end -%>
       <%= f.input :date %>
-      <%= f.submit "Next", class: 'btn btn-primary' %>
-
+      <div class="control-group">
+        <div class="controls">
+          <%= f.submit "Search", class: 'btn btn-primary' %>
+        </div>
+      </div>
     <% end %>
 
   </div>
