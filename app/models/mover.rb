@@ -1,4 +1,4 @@
 class Mover < ActiveRecord::Base
   belongs_to :user
-  validates :user, presence: true
+  validates :user, :street_address, :city, :state, :zip, presence: true
 end

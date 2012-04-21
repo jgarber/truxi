@@ -11,19 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120421163540) do
+ActiveRecord::Schema.define(:version => 20120421165139) do
 
   create_table "movers", :force => true do |t|
     t.float    "latitude"
     t.float    "longitude"
     t.boolean  "gmaps"
-    t.text     "address"
     t.float    "range"
     t.text     "availability"
     t.decimal  "hourly_rate"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
     t.integer  "user_id"
+    t.string   "street_address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
   end
 
   create_table "users", :force => true do |t|

@@ -1,14 +1,18 @@
-<%= simple_form_for(@mover) do |f| %>
+<%= simple_form_for(@mover, html:{class:'form-horizontal'}) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :address %>
+    <%= f.input :street_address %>
+    <%= f.input :city %>
+    <%= f.input :state %>
+    <%= f.input :zip %>
     <%= f.input :range %>
-    <%= f.input :availability %>
+    <%= f.input :availability, input_html:{rows:2} %>
     <%= f.input :hourly_rate %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class:'btn btn-primary' %>
+    <%= link_to 'Cancel', movers_path, class:'btn' %>
   </div>
 <% end %>

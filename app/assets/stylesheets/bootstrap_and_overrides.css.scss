@@ -1,7 +1,7 @@
 @import 'bootstrap';
 
 /* When you affix the navbar, remember to account for the hidden area underneath. Add 40px or more of padding to the <body>. Be sure to add this after the core Bootstrap CSS and before the optional responsive CSS.*/
-body { padding-top: 90px; }
+body { padding-top: 60px; }
 
 // Responsive is not part of @import "bootstrap"
 @import "bootstrap-responsive";
@@ -10,5 +10,7 @@ body { padding-top: 90px; }
 .help-block{
   clear:both;
 }
+
+.form-actions .btn { margin-right: 10px; }
 
 
