@@ -5,11 +5,6 @@
     <th>Name</th>
     <th>Email</th>
     <th>Mobile phone</th>
-    <th>Latitude</th>
-    <th>Longitude</th>
-    <th>Gmaps</th>
-    <th>Address</th>
-    <th>Range</th>
     <th>Availability</th>
     <th>Hourly rate</th>
     <th></th>
@@ -19,14 +14,9 @@
 
 <% @movers.each do |mover| %>
   <tr>
-    <td><%= mover.name %></td>
-    <td><%= mover.email %></td>
-    <td><%= mover.mobile_phone %></td>
-    <td><%= mover.latitude %></td>
-    <td><%= mover.longitude %></td>
-    <td><%= mover.gmaps %></td>
-    <td><%= mover.address %></td>
-    <td><%= mover.range %></td>
+    <td><%= mover.user.name %></td>
+    <td><%= mover.user.email %></td>
+    <td><%= mover.user.mobile_phone %></td>
     <td><%= mover.availability %></td>
     <td><%= mover.hourly_rate %></td>
     <td><%= link_to 'Show', mover %></td>
