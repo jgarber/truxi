@@ -1,13 +1,11 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <b>Destination:</b>
-  <%= @move_request.destination_id %>
+  <%= @move_request.destination.address %>
 </p>
 
 <p>
   <b>Origin:</b>
-  <%= @move_request.origin_id %>
+  <%= @move_request.origin.address %>
 </p>
 
 <p>
