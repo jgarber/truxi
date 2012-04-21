@@ -3,7 +3,7 @@
     <div class="container">
       <div class="nav-collapse">
         <ul class="nav">
-          <li><%= link_to('Home', root_path) %></li>
+          <li><%= link_to(image_tag("logo.jpg"), root_path, class:'brand') %></li>
         </ul>
         <ul class="nav pull-right">
           <% if user_signed_in? %>

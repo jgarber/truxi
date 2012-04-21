@@ -1,6 +1,7 @@
 class Mover < ActiveRecord::Base
   belongs_to :user
   validates :user, :street_address, :city, :state, :zip, presence: true
+  accepts_nested_attributes_for :user
 
   acts_as_gmappable
 

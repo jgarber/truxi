@@ -2,7 +2,11 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :user_id, as:'hidden' %>
+    <%= f.simple_fields_for :user do |user_fields| %>
+      <%= user_fields.input :name %>
+      <%= user_fields.input :email %>
+      <%= user_fields.input :password, as: :hidden, input_html:{value: 'abc123'} %>
+    <%- end -%>
     <%= f.input :street_address %>
     <%= f.input :city %>
     <%= f.input :state %>
@@ -10,6 +14,7 @@
     <%= f.input :range %>
     <%= f.input :availability, input_html:{rows:2} %>
     <%= f.input :hourly_rate %>
+    <%= f.input :rating, as: :select, collection: 0..5 %>
   </div>
 
   <div class="form-actions">
