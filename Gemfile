@@ -8,6 +8,7 @@ gem 'rails', '3.2.2'
 gem 'sqlite3'
 gem 'simple_form'
 gem 'gmaps4rails'
+gem 'devise'
 
 group :development, :test do
   gem 'rspec-rails'
