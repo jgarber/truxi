@@ -1,3 +1,10 @@
+$primaryButtonBackground: #fcaf00; 
+$navbarBackground: #bd8911;
+$navbarBackgroundHighlight: #fcb817;
+$navbarText: gray;
+$navbarLinkColor: white;
+$navbarLinkColorHover: gray; 
+
 @import 'bootstrap';
 
 /* When you affix the navbar, remember to account for the hidden area underneath. Add 40px or more of padding to the <body>. Be sure to add this after the core Bootstrap CSS and before the optional responsive CSS.*/
@@ -12,5 +19,4 @@ body { padding-top: 60px; }
 }
 
 .form-actions .btn { margin-right: 10px; }
-
 
