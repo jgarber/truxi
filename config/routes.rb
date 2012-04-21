@@ -1,4 +1,6 @@
 Truxi::Application.routes.draw do
+  resources :move_requests
+
   devise_for :users
 
   resources :movers

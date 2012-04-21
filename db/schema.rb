@@ -11,7 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120421165139) do
+ActiveRecord::Schema.define(:version => 20120421180041) do
+
+  create_table "locations", :force => true do |t|
+    t.float    "latitude"
+    t.float    "longitude"
+    t.boolean  "gmaps"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "address"
+  end
+
+  create_table "move_requests", :force => true do |t|
+    t.integer  "destination_id"
+    t.integer  "origin_id"
+    t.date     "date"
+    t.string   "time_frame"
+    t.integer  "movers_needed"
+    t.string   "truck_size"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "movers", :force => true do |t|
     t.float    "latitude"

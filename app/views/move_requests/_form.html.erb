@@ -1,0 +1,21 @@
+<%= simple_form_for(@move_request) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.simple_fields_for :origin do |origin_fields| %>
+      <%= origin_fields.input :address, label:'Origin address' %>
+    <%- end -%>
+    <%= f.simple_fields_for :destination do |destination_fields| %>
+      <%= destination_fields.input :address, label:'Destination address' %>
+    <%- end -%>
+    <%= f.input :date %>
+    <%= f.input :time_frame %>
+    <%= f.input :movers_needed %>
+    <%= f.input :truck_size %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+    <%= link_to 'Back', move_requests_path, class:'btn' %>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Destination:</b>
+  <%= @move_request.destination_id %>
+</p>
+
+<p>
+  <b>Origin:</b>
+  <%= @move_request.origin_id %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @move_request.date %>
+</p>
+
+<p>
+  <b>Time frame:</b>
+  <%= @move_request.time_frame %>
+</p>
+
+<p>
+  <b>Movers needed:</b>
+  <%= @move_request.movers_needed %>
+</p>
+
+<p>
+  <b>Truck size:</b>
+  <%= @move_request.truck_size %>
+</p>
+
+
+<%= link_to 'Edit', edit_move_request_path(@move_request) %> |
+<%= link_to 'Back', move_requests_path %>
