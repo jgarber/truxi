@@ -9,13 +9,13 @@ gem 'simple_form'
 gem 'gmaps4rails'
 gem 'devise'
 gem 'pg'
-gem 'sqlite3'
 
 group :development, :test do
   gem 'rspec-rails'
 end
 
 group :development do
+  gem 'sqlite3'
   gem 'heroku'
 end
 
