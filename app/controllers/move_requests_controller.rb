@@ -24,9 +24,9 @@ class MoveRequestsController < ApplicationController
   # GET /move_requests/new
   # GET /move_requests/new.json
   def new
-    @move_request = MoveRequest.new
-    @move_request.build_origin
-    @move_request.build_destination
+    @move_request = MoveRequest.new(params[:move_request])
+    @move_request.build_origin unless @move_request.origin
+    @move_request.build_destination unless @move_request.destination
 
     respond_to do |format|
       format.html # new.html.erb
