@@ -1,38 +1,21 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <b>Name:</b>
-  <%= @mover.name %>
+  <%= @mover.user.name %>
 </p>
 
 <p>
   <b>Email:</b>
-  <%= @mover.email %>
+  <%= @mover.user.email %>
 </p>
 
 <p>
   <b>Mobile phone:</b>
-  <%= @mover.mobile_phone %>
-</p>
-
-<p>
-  <b>Latitude:</b>
-  <%= @mover.latitude %>
-</p>
-
-<p>
-  <b>Longitude:</b>
-  <%= @mover.longitude %>
-</p>
-
-<p>
-  <b>Gmaps:</b>
-  <%= @mover.gmaps %>
+  <%= @mover.user.mobile_phone %>
 </p>
 
 <p>
   <b>Address:</b>
-  <%= @mover.address %>
+  <%= simple_format @mover.gmaps4rails_address %>
 </p>
 
 <p>

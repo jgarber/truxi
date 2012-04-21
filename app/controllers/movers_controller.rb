@@ -1,4 +1,6 @@
 class MoversController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /movers
   # GET /movers.json
   def index
@@ -24,7 +26,7 @@ class MoversController < ApplicationController
   # GET /movers/new
   # GET /movers/new.json
   def new
-    @mover = Mover.new
+    @mover = Mover.new(user: current_user)
 
     respond_to do |format|
       format.html # new.html.erb
