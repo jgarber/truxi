@@ -8,6 +8,7 @@ gem 'rails', '3.2.2'
 gem 'simple_form'
 gem 'gmaps4rails'
 gem 'devise'
+gem 'pg'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -15,11 +16,6 @@ end
 
 group :development do
   gem 'heroku'
-  gem 'sqlite3'
-end
-
-group :production do
-  gem 'pg'
 end
 
 # Gems used only for assets and not required
