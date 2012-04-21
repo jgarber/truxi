@@ -9,6 +9,7 @@ gem 'simple_form'
 gem 'gmaps4rails'
 gem 'devise'
 gem 'pg'
+gem 'haml'
 
 group :development, :test do
   gem 'rspec-rails'

@@ -52,6 +52,7 @@ GEM
       multi_json (~> 1.0)
     gmaps4rails (1.4.8)
       json
+    haml (3.1.4)
     heroku (2.18.1)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
@@ -156,6 +157,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   gmaps4rails
+  haml
   heroku
   heroku_san
   jquery-rails
