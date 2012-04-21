@@ -1,0 +1,14 @@
+@import 'bootstrap';
+
+/* When you affix the navbar, remember to account for the hidden area underneath. Add 40px or more of padding to the <body>. Be sure to add this after the core Bootstrap CSS and before the optional responsive CSS.*/
+body { padding-top: 90px; }
+
+// Responsive is not part of @import "bootstrap"
+@import "responsive";
+
+// To solve a problem: https://github.com/plataformatec/simple_form/issues/501
+.help-block{
+  clear:both;
+}
+
+
