@@ -1,4 +1,6 @@
 Truxi::Application.routes.draw do
+  resources :movers
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

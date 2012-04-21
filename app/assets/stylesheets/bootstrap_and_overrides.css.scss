@@ -4,7 +4,7 @@
 body { padding-top: 90px; }
 
 // Responsive is not part of @import "bootstrap"
-@import "responsive";
+@import "bootstrap-responsive";
 
 // To solve a problem: https://github.com/plataformatec/simple_form/issues/501
 .help-block{

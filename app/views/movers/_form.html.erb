@@ -1,0 +1,20 @@
+<%= simple_form_for(@mover) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :mobile_phone %>
+    <%= f.input :latitude %>
+    <%= f.input :longitude %>
+    <%= f.input :gmaps %>
+    <%= f.input :address %>
+    <%= f.input :range %>
+    <%= f.input :availability %>
+    <%= f.input :hourly_rate %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

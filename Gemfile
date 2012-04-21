@@ -7,7 +7,7 @@ gem 'rails', '3.2.2'
 
 gem 'sqlite3'
 gem 'simple_form'
-gem "geocoder"
+gem 'gmaps4rails'
 
 group :development, :test do
   gem 'rspec-rails'

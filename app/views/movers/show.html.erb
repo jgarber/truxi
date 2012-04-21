@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @mover.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @mover.email %>
+</p>
+
+<p>
+  <b>Mobile phone:</b>
+  <%= @mover.mobile_phone %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @mover.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @mover.longitude %>
+</p>
+
+<p>
+  <b>Gmaps:</b>
+  <%= @mover.gmaps %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @mover.address %>
+</p>
+
+<p>
+  <b>Range:</b>
+  <%= @mover.range %>
+</p>
+
+<p>
+  <b>Availability:</b>
+  <%= @mover.availability %>
+</p>
+
+<p>
+  <b>Hourly rate:</b>
+  <%= @mover.hourly_rate %>
+</p>
+
+
+<%= link_to 'Edit', edit_mover_path(@mover) %> |
+<%= link_to 'Back', movers_path %>
