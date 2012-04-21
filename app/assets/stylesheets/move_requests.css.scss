@@ -1,3 +1,23 @@
 // Place all the styles related to the MoveRequests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.map_container {
+  padding: 6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc #ccc #999 #ccc;
+  -webkit-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  -moz-box-shadow: rgba(64, 64, 64, 0.5) 0 2px 5px;
+  box-shadow: rgba(64, 64, 64, 0.1) 0 2px 5px;
+  width: 446px;
+}
+
+.gmaps4rails_map {
+  width: 446px;
+  height: 300px;
+}
+
+.refine-search > div {
+  background: #eee;
+}
+

@@ -24,9 +24,21 @@ class MoveRequestsController < ApplicationController
   # GET /move_requests/new
   # GET /move_requests/new.json
   def new
-    @move_request = MoveRequest.new
-    @move_request.build_origin
-    @move_request.build_destination
+    @move_request = MoveRequest.new(params[:move_request])
+    @move_request.build_origin unless @move_request.origin
+    @move_request.build_destination unless @move_request.destination
+    if @move_request.origin
+      mover_letter = 'A'
+      @movers = Mover.all
+      @movers_map_data = @movers.to_gmaps4rails do |mover, marker|
+        marker.picture({
+          picture: "http://www.google.com/mapfiles/marker#{mover_letter}.png"
+         })
+        marker.json({id: mover.id}).tap do
+          mover_letter = mover_letter.succ # Hacky
+        end
+      end
+    end
 
     respond_to do |format|
       format.html # new.html.erb

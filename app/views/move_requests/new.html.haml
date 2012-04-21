@@ -1,0 +1,33 @@
+%h1 Search for Movers
+
+.well
+  .row
+    .span5
+      = render 'form'
+    .span6
+      -#= gmaps4rails(@movers_map_data)
+      = gmaps("markers" => {"data" => @movers_map_data})
+
+.row
+  .span12
+    %table
+      %thead
+        %tr
+          %th Select
+          %th 
+          %th Rating
+          %th Hourly Rate
+          %th Truck
+          %th Distance
+      %tbody
+        - letters = ('A'..'Z').to_a
+        - @movers.each_with_index do |mover, index|
+          %tr
+            %td= check_box_tag ''
+            %td= letters[index]
+            %td
+              - mover.rating.times do
+                star
+            %td= mover.hourly_rate
+            %td
+            %td= "dist"
