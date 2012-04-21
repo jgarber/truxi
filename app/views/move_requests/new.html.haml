@@ -26,8 +26,8 @@
             %td= check_box_tag ''
             %td= letters[index]
             %td
-              - mover.rating.times do
-                star
+              - mover.rating.to_i.times do
+                = image_tag('star.png')
             %td= mover.hourly_rate
             %td
             %td= "dist"
