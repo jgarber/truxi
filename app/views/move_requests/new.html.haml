@@ -47,5 +47,5 @@
                 %i.star-full>
               - (5 - mover.rating.to_i).times do
                 %i.star-empty>
-            %td= truncate mover.description
+            %td= truncate mover.description, length: 50, separator: ' '
 
