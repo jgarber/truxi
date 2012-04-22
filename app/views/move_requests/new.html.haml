@@ -20,7 +20,7 @@
           %th Hourly Rate
           %th Truck
           -if @move_request.origin.present?
-            %th Distance
+            %th Distance Away
       %tbody
         - letters = ('A'..'Z').to_a
         - @movers.each_with_index do |mover, index|
