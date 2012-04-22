@@ -29,15 +29,13 @@ h1 { font-size: 40px; line-height: 50px; }
 }
 .modal.photo { width: auto; }
 
-ol.how-it-works {
+.how-it-works {
+  margin: 10px 0 0;
   font-size: 20px;
-  li {
+  div {
     margin-bottom: 20px;
-    margin-right: 50px;
-    width: 300px;
-    float: left;
   }
-  p { font-size: 16px; }
+  p { font-size: 16px; margin-right: 20px; }
 }
 input.kol-signup-email { margin: 0 10px 0 0; }
 
