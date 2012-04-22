@@ -29,9 +29,14 @@
           %tr
             %td.select
               = label_tag "#{letters[index]}" do |t|
-                = letters[index]
                 = check_box_tag "#{letters[index]}"
-            %td= image_tag(mover.photo, size:"50x50") if mover.photo.present?
+                = letters[index]
+            %td
+              - if mover.photo.present?
+                = link_to(image_tag(mover.photo, size:"50x50"), "#photo_#{mover.id}", data:{toggle:'modal'})
+                - content_for :modals do
+                  .modal.photo{id: "photo_#{mover.id}", style:'display:none;'}
+                    = image_tag(mover.photo, size:"400x400")
             %td= mover.user.name
             %td= "#{mover.city.titleize}, #{mover.state.upcase}"
             -#
