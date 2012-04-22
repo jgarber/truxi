@@ -20,6 +20,7 @@ group :development do
   gem 'sqlite3'
   gem 'heroku'
   gem "heroku_san"
+  gem 'taps'
 end
 
 # Gems used only for assets and not required
