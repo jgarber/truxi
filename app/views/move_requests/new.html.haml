@@ -54,5 +54,5 @@
                 - (5 - mover.rating.to_i).times do
                   %i.star-empty>
               %td= truncate mover.description, length: 50, separator: ' '
-      = f.submit "Contact", class: 'btn btn-primary btn-large'
+      = link_to "Contact", '/beta', class: 'btn btn-primary btn-large'
 
