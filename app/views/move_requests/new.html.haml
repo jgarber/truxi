@@ -3,7 +3,7 @@
 .well
   .row
     .span5
-      = render 'form'
+      = render 'short_form'
     .span6
       -#= gmaps4rails(@movers_map_data)
       = gmaps("markers" => {"data" => @movers_map_data})
