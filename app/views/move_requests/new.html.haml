@@ -29,8 +29,8 @@
           %tr
             %td.select
               = label_tag "#{letters[index]}" do |t|
-                = letters[index]
                 = check_box_tag "#{letters[index]}"
+                = letters[index]
             %td
               - if mover.photo.present?
                 = link_to(image_tag(mover.photo, size:"50x50"), "#photo_#{mover.id}", data:{toggle:'modal'})
