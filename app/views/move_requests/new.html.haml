@@ -28,13 +28,13 @@
               %label.checkbox.inline
                 = check_box_tag ''
                 = letters[index]
-            %td= mover.city
+            %td= "#{mover.city.titleize}, #{mover.state.upcase}"
             %td
               - mover.rating.to_i.times do
                 = image_tag('star.png')
               - (5 - mover.rating.to_i).times do
                 = image_tag('empty-star.png')
             %td= number_to_currency(mover.hourly_rate)
-            %td
+            %td= image_tag "truck-pics/#{mover.id % 11}.jpg"
             - if @move_request.origin.present?
               %td= sprintf "%.1f mi", mover.distance
