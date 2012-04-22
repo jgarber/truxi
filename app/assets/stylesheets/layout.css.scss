@@ -3,6 +3,7 @@
 }
 
 .hero-unit {
+  padding: 40px 20px 20px;
   h1 { font-size: 54px; }
   h2 {
     font-size: 18px;
@@ -15,7 +16,6 @@
     font-size: 16px; color: inherit; line-height: inherit;
   }
   small { color: #666; font-size: 12px; }
-
 }
 .navbar .nav > li > a.brand { padding: 0; margin-right: 20px; }
 .hero-unit .logo { margin-bottom: 10px; }
@@ -26,6 +26,13 @@
   padding: 20px;
   float: right;
 }
+
+ol.how-it-works {
+  font-size: 20px;
+  margin-left: 50px;
+  li { margin-bottom: 20px; }
+}
+
 input.state-field { width: 20px; }
 input.zip-field { width: 80px; }
 abbr { color: red; }
@@ -63,3 +70,14 @@ footer { margin-top: 20px; }
 .star-empty { background-position: 0px 0px }
 .star-full { background-position: 0px -14px }
 .stars {width: 70px; }
+
+/* Responsive */
+@media (max-width: 767px) {
+  .hero-unit {
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  .home-form {
+    float: left;
+  }
+}
