@@ -10,24 +10,30 @@
 
 .row
   .span12
-    %table
+    %h3 Select movers to contact
+    %table.results
       %thead
         %tr
           %th Select
-          %th 
+          %th City
           %th Rating
           %th Hourly Rate
           %th Truck
-          %th Distance
+          -if @move_request.origin.present?
+            %th Distance Away
       %tbody
         - letters = ('A'..'Z').to_a
         - @movers.each_with_index do |mover, index|
           %tr
-            %td= check_box_tag ''
-            %td= letters[index]
+            %td
+              %label.checkbox.inline
+                = check_box_tag ''
+                = letters[index]
+            %td= mover.city
             %td
               - mover.rating.to_i.times do
                 = image_tag('star.png')
-            %td= mover.hourly_rate
+            %td= number_to_currency(mover.hourly_rate)
             %td
-            %td= "dist"
+            - if @move_request.origin.present?
+              %td= mover.miles_away_from(@move_request.origin)

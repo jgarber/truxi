@@ -7,6 +7,7 @@ gem 'rails', '3.2.2'
 
 gem 'simple_form'
 gem 'gmaps4rails'
+gem "geocoder"
 gem 'devise'
 gem 'pg'
 gem 'haml'

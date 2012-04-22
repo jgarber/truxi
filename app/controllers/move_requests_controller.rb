@@ -28,6 +28,7 @@ class MoveRequestsController < ApplicationController
     @move_request.build_origin unless @move_request.origin
     @move_request.build_destination unless @move_request.destination
     if @move_request.origin
+      @move_request.origin.geocode
       mover_letter = 'A'
       @movers = Mover.all
       @movers_map_data = @movers.to_gmaps4rails do |mover, marker|
