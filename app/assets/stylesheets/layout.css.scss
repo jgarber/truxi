@@ -26,6 +26,13 @@
   padding: 20px;
   float: right;
 }
+
+ol.how-it-works {
+  font-size: 20px;
+  margin-left: 50px;
+  li { margin-bottom: 20px; }
+}
+
 input.state-field { width: 20px; }
 input.zip-field { width: 80px; }
 abbr { color: red; }
