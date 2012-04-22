@@ -4,7 +4,7 @@
   .row
     .span5
       = render 'short_form'
-    .span6
+    .span6.relative.map
       = gmaps("markers" => {"data" => @markers}, map_options: {auto_zoom:false, zoom:11, auto_adjust:false, center_latitude: @move_request.origin.latitude, center_longitude: @move_request.origin.longitude})
 
 .row

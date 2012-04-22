@@ -37,6 +37,7 @@ h1 { font-size: 40px; line-height: 50px; }
   }
   p { font-size: 16px; margin-right: 20px; }
 }
+.map { float: right; }
 input.kol-signup-email { margin: 0 10px 0 0; }
 
 input.state-field { width: 20px; }
@@ -87,3 +88,10 @@ footer { margin-top: 20px; }
     float: left;
   }
 }
+@media (max-width: 1200px) {
+  #new_move_request {
+    .control-label { width: 80px; }
+    .controls { margin-left: 100px; }
+  }
+}
+
