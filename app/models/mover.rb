@@ -2,6 +2,7 @@ class Mover < ActiveRecord::Base
   belongs_to :user
   validates :user, :street_address, :city, :state, :zip, presence: true
   accepts_nested_attributes_for :user
+  attr_accessor :distance
 
   geocoded_by :gmaps4rails_address
   after_validation :geocode
@@ -9,7 +10,7 @@ class Mover < ActiveRecord::Base
 
   def miles_away_from(object)
     return unless object && object.latitude && object.longitude
-    sprintf "%.1f mi", self.distance_from([object.latitude, object.longitude])
+    self.distance_from([object.latitude, object.longitude])
   end
 
   def gmaps4rails_address

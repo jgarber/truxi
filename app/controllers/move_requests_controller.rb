@@ -30,15 +30,25 @@ class MoveRequestsController < ApplicationController
     if @move_request.origin
       @move_request.origin.geocode
       mover_letter = 'A'
-      @movers = Mover.all
-      @movers_map_data = @movers.to_gmaps4rails do |mover, marker|
-        marker.picture({
-          picture: "http://www.google.com/mapfiles/marker#{mover_letter}.png"
-         })
-        marker.json({id: mover.id}).tap do
-          mover_letter = mover_letter.succ # Hacky
+      @movers = Mover.all.map {|m| m.distance = m.miles_away_from(@move_request.origin); m }.sort_by(&:distance)
+      @marker_objs = @movers + [@move_request.origin]
+      @markers = @marker_objs.to_gmaps4rails do |object, marker|
+        if object.is_a?(Location)
+          #marker.picture({picture: "http://maps.google.com/mapfiles/ms/micons/green.png"})
+          marker.json({id: object.id})
+        else
+          marker.picture({picture: "http://www.google.com/mapfiles/marker#{mover_letter}.png"})
+          marker.json({id: object.id}).tap do
+            mover_letter = mover_letter.succ # Hacky
+          end
         end
       end
+      #@markers = [@move_request.origin].to_gmaps4rails do |location, marker|
+        #marker.picture({
+          #picture: "http://www.google.com/mapfiles/markerZ.png"
+         #})
+        #marker.json({id: location.id})
+      #end
     end
 
     respond_to do |format|
