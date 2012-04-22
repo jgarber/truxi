@@ -34,11 +34,11 @@
             %td= image_tag(mover.photo, "20x20") if mover.photo.present?
             %td= mover.user.name
             %td= "#{mover.city.titleize}, #{mover.state.upcase}"
-            %td
+            %td.stars
               - mover.rating.to_i.times do
-                <i class="star-full"></i>
+                %i.star-full>
               - (5 - mover.rating.to_i).times do
-                <i class="star-empty"></i>
+                %i.star-empty>
             %td= number_to_currency(mover.hourly_rate)
             %td= image_tag "truck-pics/#{mover.id % 11}.jpg"
             - if @move_request.origin.present?

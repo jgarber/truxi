@@ -41,8 +41,8 @@ footer { margin-top: 20px; }
   background-image: url(/assets/star_sprites.png);
   background-position: 0px 0px;
   background-repeat: no-repeat;
-  *margin-right: .3em;
 }
 
 .star-empty { background-position: 0px 0px }
 .star-full { background-position: 0px -14px }
+.stars {width: 70px; }
