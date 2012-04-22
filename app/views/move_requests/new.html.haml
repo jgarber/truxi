@@ -5,8 +5,7 @@
     .span5
       = render 'short_form'
     .span6
-      -#= gmaps4rails(@movers_map_data)
-      = gmaps("markers" => {"data" => @movers_map_data})
+      = gmaps("markers" => {"data" => @markers}, map_options: {auto_zoom:false, zoom:11, auto_adjust:false, center_latitude: @move_request.origin.latitude, center_longitude: @move_request.origin.longitude})
 
 .row
   .span12
