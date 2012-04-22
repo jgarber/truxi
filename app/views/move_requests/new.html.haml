@@ -13,35 +13,39 @@
     %table.results.table.table-striped
       %thead
         %tr
-          %th Select
+          %th &nbsp;
           %th Photo
           %th Name
           %th City
-          %th Rating
-          %th Hourly Rate
-          %th Truck
           -if @move_request.origin.present?
             %th Distance
+          %th Truck
+          %th Hourly Rate
+          %th Rating
           %th Description
       %tbody
         - letters = ('A'..'Z').to_a
         - @movers.each_with_index do |mover, index|
           %tr
-            %td
-              %label.checkbox.inline
-                = check_box_tag ''
+            %td.select
+              = label_tag "#{letters[index]}" do |t|
                 = letters[index]
+                = check_box_tag "#{letters[index]}"
             %td= image_tag(mover.photo, size:"50x50") if mover.photo.present?
             %td= mover.user.name
             %td= "#{mover.city.titleize}, #{mover.state.upcase}"
+            -#
+              %td= image_tag "truck-pics/#{mover.id % 11}.jpg"
+            - if @move_request.origin.present?
+              %td= sprintf("%.1f mi", mover.distance) if mover.distance
+            %td 
+              - truck = ["truck-pickup","truck-van","truck-box-sm", "truck-box-md", "truck-box-lg"].sample()
+              %i{class: "#{truck}" }
+            %td= number_to_currency(mover.hourly_rate)
             %td.stars
               - mover.rating.to_i.times do
                 %i.star-full>
               - (5 - mover.rating.to_i).times do
                 %i.star-empty>
-            %td= number_to_currency(mover.hourly_rate)
-            %td= image_tag "truck-pics/#{mover.id % 11}.jpg"
-            - if @move_request.origin.present?
-              %td= sprintf "%.1f mi", mover.distance
             %td= truncate mover.description
 

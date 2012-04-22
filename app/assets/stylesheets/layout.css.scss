@@ -29,6 +29,7 @@
 input.state-field { width: 20px; }
 input.zip-field { width: 80px; }
 abbr { color: red; }
+td.select { width: 30px; input {display: inline-block;}}
 footer { margin-top: 20px; }
 [class^="truck-"], [class*=" truck-"] {
   display: inline-block;
