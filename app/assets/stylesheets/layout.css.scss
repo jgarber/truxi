@@ -14,3 +14,35 @@ input.state-field { width: 20px; }
 input.zip-field { width: 80px; }
 abbr { color: red; }
 footer { margin-top: 20px; }
+[class^="truck-"], [class*=" truck-"] {
+  display: inline-block;
+  width: 42px;
+  height: 21px;
+  line-height: 21px;
+  vertical-align: text-top;
+  background-image: url(/assets/truck_sprites.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  *margin-right: .3em;
+}
+
+.truck-pickup{ background-position: 0px 0px; }
+.truck-van{ background-position: 0px -21px; }
+.truck-box-sm{ background-position: 0px -42px; }
+.truck-box-md{ background-position: 0px -63px; }
+.truck-box-lg{ background-position: 0px -84px; }
+
+[class^="star-"], [class*=" star-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url(/assets/star_sprites.png);
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  *margin-right: .3em;
+}
+
+.star-empty { background-position: 0px 0px }
+.star-full { background-position: 0px -14px }

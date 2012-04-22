@@ -5,16 +5,17 @@
     .span5
       = render 'short_form'
     .span6
-      = gmaps("markers" => {"data" => @markers}, map_options: {auto_zoom:false, zoom:11, auto_adjust:false, center_latitude: @move_request.origin.latitude, center_longitude: @move_request.origin.longitude})
+      -#= gmaps4rails(@movers_map_data)
+      = gmaps("markers" => {"data" => @movers_map_data})
 
 .row
   .span12
     %h3 Select movers to contact
-    %table.results
+    %table.results.table.table-striped
       %thead
         %tr
-          %th Select
-          %th City
+          %th &nbsp;
+          %th Name
           %th Rating
           %th Hourly Rate
           %th Truck
@@ -27,13 +28,12 @@
             %td
               %label.checkbox.inline
                 = check_box_tag ''
-                = letters[index]
-            %td= "#{mover.city.titleize}, #{mover.state.upcase}"
+            %td= mover.user.name
             %td
               - mover.rating.to_i.times do
-                = image_tag('star.png')
+                <i class="star-full"></i>
               - (5 - mover.rating.to_i).times do
-                = image_tag('empty-star.png')
+                <i class="star-empty"></i>
             %td= number_to_currency(mover.hourly_rate)
             %td= image_tag "truck-pics/#{mover.id % 11}.jpg"
             - if @move_request.origin.present?

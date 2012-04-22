@@ -17,4 +17,9 @@ class Mover < ActiveRecord::Base
   #describe how to retrieve the address from your model, if you use directly a db column, you can dry your code, see wiki
     "#{street_address}\n #{city}, #{state} #{zip}" 
   end
+
+  def gmaps4rails_infowindow
+    "<b>#{user.name}</b><br/>#{street_address}<br />#{city}, #{state} #{zip}" 
+  end
+
 end
