@@ -32,6 +32,8 @@
             %td
               - mover.rating.to_i.times do
                 = image_tag('star.png')
+              - (5 - mover.rating.to_i).times do
+                = image_tag('empty-star.png')
             %td= number_to_currency(mover.hourly_rate)
             %td
             - if @move_request.origin.present?
