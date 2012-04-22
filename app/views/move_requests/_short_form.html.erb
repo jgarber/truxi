@@ -1,10 +1,10 @@
     <%= simple_form_for(@move_request, url: new_move_request_path, method: :get, html: {class: "form-horizontal"}) do |f| %>
       <h3>Find A Mover</h3>
       <%= f.simple_fields_for :origin do |origin_fields| %>
-        <%= origin_fields.input :address, label: "Origin", placeholder: "Philadelphia, PA" %>
+        <%= origin_fields.input :address, label: "Origin", placeholder: "New York, NY" %>
       <%- end -%>
       <%= f.simple_fields_for :destination do |destination_fields| %>
-        <%= destination_fields.input :address, label: "Destination", placeholder: "New York, NY" %>
+        <%= destination_fields.input :address, label: "Destination", placeholder: "Philadelphia, PA" %>
       <%- end -%>
       <%= f.input :date %>
       <div class="control-group">
