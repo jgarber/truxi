@@ -28,6 +28,7 @@ class MoveRequestsController < ApplicationController
   def new
     @move_request = MoveRequest.new(params[:move_request])
     @move_request.build_origin unless @move_request.origin
+    @move_request.origin.address = 'Philadelphia, PA' unless @move_request.origin.address.present?
     @move_request.build_destination unless @move_request.destination
     if @move_request.origin
       @move_request.origin.geocode
