@@ -21,7 +21,8 @@
           %th Hourly Rate
           %th Truck
           -if @move_request.origin.present?
-            %th Distance Away
+            %th Distance
+          %th Description
       %tbody
         - letters = ('A'..'Z').to_a
         - @movers.each_with_index do |mover, index|
@@ -42,3 +43,5 @@
             %td= image_tag "truck-pics/#{mover.id % 11}.jpg"
             - if @move_request.origin.present?
               %td= sprintf "%.1f mi", mover.distance
+            %td= truncate mover.description
+
