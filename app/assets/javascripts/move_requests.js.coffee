@@ -6,6 +6,5 @@
 $ ->
   $('.trucks button').click (e) ->
     e.preventDefault()
-    false
 
 

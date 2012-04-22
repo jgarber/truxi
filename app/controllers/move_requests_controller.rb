@@ -1,4 +1,6 @@
 class MoveRequestsController < ApplicationController
+ http_basic_authenticate_with :name => "truxi", :password => "optimus", except: :new 
+
   # GET /move_requests
   # GET /move_requests.json
   def index

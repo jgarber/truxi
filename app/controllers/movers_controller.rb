@@ -1,4 +1,5 @@
 class MoversController < ApplicationController
+ http_basic_authenticate_with :name => "truxi", :password => "optimus"
   #before_filter :authenticate_user!
 
   # GET /movers
