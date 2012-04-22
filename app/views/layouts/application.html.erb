@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Truxi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -16,6 +17,11 @@
         <%= yield %>
       </div>
       <footer>
+        <div class="row">
+          <div class="well">
+            Truxi is a project for <a href="http://philly.startupweekend.org/">PHLSW 2012</a>. Ratings and rates are for demonstration purposes only.
+          </div>
+        </div>
       </footer>
     </div> <!--! end of #container -->
     <%= yield :scripts %>
