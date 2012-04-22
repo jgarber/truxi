@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120421235050) do
+ActiveRecord::Schema.define(:version => 20120422142852) do
 
   create_table "locations", :force => true do |t|
     t.float    "latitude"
@@ -23,49 +23,51 @@ ActiveRecord::Schema.define(:version => 20120421235050) do
   end
 
   create_table "move_requests", :force => true do |t|
-    t.integer  "destination_id"
-    t.integer  "origin_id"
-    t.date     "date"
-    t.string   "time_frame"
-    t.integer  "movers_needed"
-    t.string   "truck_size"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-    t.text     "description"
+    t.integer   "destination_id"
+    t.integer   "origin_id"
+    t.date      "date"
+    t.string    "time_frame"
+    t.integer   "movers_needed"
+    t.string    "truck_size"
+    t.timestamp "created_at",     :null => false
+    t.timestamp "updated_at",     :null => false
+    t.text      "description"
   end
 
   create_table "movers", :force => true do |t|
-    t.float    "latitude"
-    t.float    "longitude"
-    t.boolean  "gmaps"
-    t.float    "range"
-    t.text     "availability"
-    t.decimal  "hourly_rate"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-    t.integer  "user_id"
-    t.string   "street_address"
-    t.string   "city"
-    t.string   "state"
-    t.string   "zip"
-    t.integer  "rating"
+    t.float     "latitude"
+    t.float     "longitude"
+    t.boolean   "gmaps"
+    t.float     "range"
+    t.text      "availability"
+    t.decimal   "hourly_rate"
+    t.timestamp "created_at",     :null => false
+    t.timestamp "updated_at",     :null => false
+    t.integer   "user_id"
+    t.string    "street_address"
+    t.string    "city"
+    t.string    "state"
+    t.string    "zip"
+    t.integer   "rating"
+    t.string    "photo"
+    t.string    "description"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email"
-    t.string   "encrypted_password",     :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.string   "name"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
-    t.string   "mobile_phone"
+    t.string    "email"
+    t.string    "encrypted_password",     :default => "", :null => false
+    t.string    "reset_password_token"
+    t.timestamp "reset_password_sent_at"
+    t.timestamp "remember_created_at"
+    t.integer   "sign_in_count",          :default => 0
+    t.timestamp "current_sign_in_at"
+    t.timestamp "last_sign_in_at"
+    t.string    "current_sign_in_ip"
+    t.string    "last_sign_in_ip"
+    t.string    "name"
+    t.timestamp "created_at",                             :null => false
+    t.timestamp "updated_at",                             :null => false
+    t.string    "mobile_phone"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

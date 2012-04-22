@@ -19,13 +19,13 @@
 </p>
 
 <p>
-  <b>Range:</b>
-  <%= @mover.range %>
+  <b>Photo:</b>
+  <%= image_tag @mover.photo if @mover.photo.present? %>
 </p>
 
 <p>
-  <b>Availability:</b>
-  <%= @mover.availability %>
+  <b>Description:</b>
+  <%= @mover.description %>
 </p>
 
 <p>

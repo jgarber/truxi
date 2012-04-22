@@ -14,8 +14,10 @@
     %table.results.table.table-striped
       %thead
         %tr
-          %th &nbsp;
+          %th Select
+          %th Photo
           %th Name
+          %th City
           %th Rating
           %th Hourly Rate
           %th Truck
@@ -28,7 +30,10 @@
             %td
               %label.checkbox.inline
                 = check_box_tag ''
+                = letters[index]
+            %td= image_tag(mover.photo, "20x20") if mover.photo.present?
             %td= mover.user.name
+            %td= "#{mover.city.titleize}, #{mover.state.upcase}"
             %td
               - mover.rating.to_i.times do
                 <i class="star-full"></i>
