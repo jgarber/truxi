@@ -30,7 +30,7 @@
               %label.checkbox.inline
                 = check_box_tag ''
                 = letters[index]
-            %td= image_tag(mover.photo, "20x20") if mover.photo.present?
+            %td= image_tag(mover.photo, size:"50x50") if mover.photo.present?
             %td= mover.user.name
             %td= "#{mover.city.titleize}, #{mover.state.upcase}"
             %td.stars
