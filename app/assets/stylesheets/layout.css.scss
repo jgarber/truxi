@@ -43,10 +43,10 @@ footer { margin-top: 20px; }
   *margin-right: .3em;
 }
 
-.truck-pickup{ background-position: 0px 0px; }
-.truck-van{ background-position: 0px -21px; }
-.truck-box-sm{ background-position: 0px -42px; }
-.truck-box-md{ background-position: 0px -63px; }
+.truck-pickup{ background-position: 0px 0px; width: 26px; }
+.truck-van{ background-position: 0px -21px; width: 26px; }
+.truck-box-sm{ background-position: 0px -42px; width: 28px; }
+.truck-box-md{ background-position: 0px -63px; width: 34px; }
 .truck-box-lg{ background-position: 0px -84px; }
 
 [class^="star-"], [class*=" star-"] {

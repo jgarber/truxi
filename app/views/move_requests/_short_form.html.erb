@@ -8,6 +8,19 @@
       <%- end -%>
       <%= f.input :date %>
       <div class="control-group">
+        <label class="control-label">Truck Size</label>
+        <div class="controls">
+          <div class="btn-group trucks" data-toggle="buttons-radio">
+            <button class="btn"><i class="truck-pickup"></i></button>
+            <button class="btn"><i class="truck-van"></i></button>
+            <button class="btn"><i class="truck-box-sm"></i></button>
+            <button class="btn"><i class="truck-box-md"></i></button>
+            <button class="btn"><i class="truck-box-lg"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group">
         <div class="controls">
           <%= f.submit "Search", class: 'btn btn-primary' %>
         </div>
