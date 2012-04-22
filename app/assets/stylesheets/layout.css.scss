@@ -3,6 +3,7 @@
 }
 
 .hero-unit {
+  h1 { font-size: 54px; }
   h2 {
     font-size: 18px;
     font-weight: bold;
@@ -20,9 +21,10 @@
 .hero-unit .logo { margin-bottom: 10px; }
 .relative { position: relative; }
 .home-form {
-  position: absolute; top: 20px; right: 20px;
+  @include border-radius(6px);
   background: white;
   padding: 20px;
+  float: right;
 }
 input.state-field { width: 20px; }
 input.zip-field { width: 80px; }
